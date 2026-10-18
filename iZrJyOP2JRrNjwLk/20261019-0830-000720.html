@@ -1,0 +1,263 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=660"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Cache-Control" content="no-cache"><title>현대건설 리뷰</title><style>
+@font-face{font-family:P;src:url(file:///mnt/attach/project-files/stock-alert/fonts/Pretendard-Regular.otf);font-weight:400}
+@font-face{font-family:P;src:url(file:///mnt/attach/project-files/stock-alert/fonts/Pretendard-SemiBold.otf);font-weight:600}
+@font-face{font-family:P;src:url(file:///mnt/attach/project-files/stock-alert/fonts/Pretendard-ExtraBold.otf);font-weight:800}
+*{box-sizing:border-box;margin:0;padding:0}
+body{width:640px;background:#f2f3f7;font-family:P,sans-serif;color:#191c23;padding:26px 24px;
+ display:flex;flex-direction:column;gap:18px;font-variant-numeric:tabular-nums}
+.top{display:flex;justify-content:space-between;align-items:baseline}
+.name{font-size:36px;font-weight:800} .when{font-size:22px;color:#5f6778;font-weight:600}
+.box{background:#fff;border-radius:22px;padding:24px 22px;display:flex;flex-direction:column;gap:14px}
+h3{font-size:30px;font-weight:800}
+.price{font-size:64px;font-weight:800;line-height:1}
+.chg{font-size:30px;font-weight:800;margin-top:6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{border-radius:16px;padding:14px 16px;background:#f2f3f7}
+.tile span{display:block;font-size:22px;color:#5f6778;font-weight:600}
+.tile b{display:block;font-size:34px;font-weight:800;margin-top:2px}
+.big{background:#e8effc} .big.up{background:#fdecec}
+.sum{font-size:26px;font-weight:700;line-height:1.35}
+.lg{display:flex;gap:22px;font-size:22px;font-weight:600}
+.lg i{display:inline-block;width:18px;height:18px;border-radius:5px;margin-right:7px;vertical-align:-2px}
+.r{display:grid;grid-template-columns:40px 1fr;gap:6px;align-items:start}
+.r .s{font-size:28px;font-weight:800;line-height:1.3}
+.r b{display:block;font-size:28px;font-weight:800;line-height:1.3}
+.r span{display:block;font-size:22px;color:#5f6778;line-height:1.35}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kp div{background:#f2f3f7;border-radius:16px;padding:12px 14px}
+.kp span{display:block;font-size:22px;color:#5f6778;font-weight:600}
+.kp b{display:block;font-size:34px;font-weight:800} .kp small{font-size:21px;color:#5f6778}
+.earn{display:flex;justify-content:space-around;align-items:flex-end;height:150px}
+.earn div{display:flex;flex-direction:column;align-items:center;gap:6px}
+.earn i{width:84px;border-radius:10px 10px 0 0;display:block}
+.earn b{font-size:26px;font-weight:800} .earn span{font-size:21px;color:#5f6778}
+.sc{display:flex;flex-direction:column;gap:10px}
+.sc div{border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:118px 1fr;gap:8px;align-items:center}
+.sc .k{font-size:26px;font-weight:800} .sc p{font-size:25px;font-weight:600;line-height:1.35}
+.ev{font-size:24px;font-weight:600} .ev span{color:#5f6778}
+.ft{font-size:18px;color:#5f6778}
+.vw{border-radius:16px;padding:14px 16px} .vw span{display:block;font-size:21px;color:#5f6778;font-weight:600}
+.vw b{display:block;font-size:34px;font-weight:800} .vw p{font-size:22px;font-weight:600}
+.op{display:flex;flex-direction:column;gap:8px;padding-left:28px} .op li{font-size:25px;font-weight:600;line-height:1.4}
+.fr{display:grid;grid-template-columns:92px 1fr 190px;gap:12px;align-items:center}
+.who{font-size:26px;font-weight:800} .fr b{font-size:25px;font-weight:800;text-align:right}
+.trk{position:relative;height:30px;background:#f2f3f7;border-radius:8px}
+.trk i{position:absolute;top:0;bottom:0;border-radius:6px} .trk .mid{left:50%;width:3px;margin-left:-1px;background:#c5cad6}
+.hq{display:flex;flex-direction:column;gap:8px} .hq h4{font-size:27px;font-weight:800}
+.hq p{font-size:22px;color:#5f6778;line-height:1.45}
+.gg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.gg span{text-align:center;font-size:25px;padding:9px 0;border-radius:12px}
+
+.hd{display:flex;justify-content:space-between;align-items:baseline}
+.slot{font-size:24px;font-weight:800;color:#fff;background:#191c23;border-radius:99px;padding:6px 16px;white-space:nowrap;flex-shrink:0}
+.rows{display:flex;flex-direction:column;gap:10px}
+.row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:baseline;font-size:26px;font-weight:600}
+.row b{font-size:28px;font-weight:800}
+.rng{position:relative;height:16px;background:#e8effc;border-radius:8px;margin:56px 10px 44px}
+.rng i{position:absolute;top:-10px;width:6px;height:36px;border-radius:3px;margin-left:-3px}
+.rng em{position:absolute;font-style:normal;font-size:21px;font-weight:700;white-space:nowrap;transform:translateX(-50%)}
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.fh{font-size:23px;font-weight:800;color:#5f6778;margin-top:4px}
+.fx{display:grid;grid-template-columns:168px 1fr auto;gap:10px;align-items:center}
+.fx b{font-size:25px;font-weight:800} .fx span{font-size:22px;color:#5f6778;line-height:1.3}
+.fx i{font-style:normal;font-size:22px;font-weight:800;padding:5px 12px;border-radius:99px}
+.grp{background:#f2f3f7;border-radius:18px;padding:14px 18px} .grp.tint{background:#eef2fb}
+.grp h5{font-size:22px;font-weight:800;color:#5f6778;margin:0 0 6px}
+.g3{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:8px} .g3 div{display:flex;flex-direction:column}
+.g3 span{font-size:20px;color:#5f6778;font-weight:600} .g3 b{font-size:29px;font-weight:800;white-space:nowrap}
+.g3 em{font-style:normal;font-size:21px;font-weight:700}
+.ind{display:grid;grid-template-columns:190px 1fr auto;gap:4px 10px;align-items:center;padding:8px 0;border-bottom:1px solid #eef0f4}
+.ind b{font-size:24px;font-weight:800} .ind .v{font-size:23px;font-weight:700} .ind em{font-style:normal}
+.ind i{font-style:normal;font-size:21px;font-weight:800;padding:4px 11px;border-radius:99px}
+.ind p{grid-column:1/-1;margin:0;font-size:21px;color:#5f6778;line-height:1.3}
+.chk{display:flex;flex-direction:column;gap:10px} .chk div{font-size:26px;font-weight:600;line-height:1.35}
+.chk div::before{content:"✔ ";color:#c92a2a;font-weight:800}
+
+.bz{padding:6px 0}.bz div{display:flex;align-items:center;gap:10px;font-size:24px}.bz div span{font-weight:800}
+.bz i{display:block;height:14px;border-radius:7px;margin:6px 0 2px}.bz p{font-size:20px;color:#5f6778;font-weight:600}
+.pw{padding:10px 0;border-bottom:1px solid #e6e8ee}.pw div{display:flex;align-items:center;gap:10px;font-size:25px}.pw p{font-size:21px;font-weight:600;color:#4a5060;line-height:1.4;margin-top:4px}
+.pw-bar{display:flex;gap:3px}.pw-bar i{width:22px;height:12px;border-radius:3px}.pw-ch{font-style:normal;font-size:19px;font-weight:800;background:#fff1e6;color:#a84a00;border-radius:8px;padding:2px 8px}
+.kd{font-style:normal;font-size:19px;font-weight:800;border-radius:8px;padding:2px 8px;margin-right:8px;vertical-align:2px}
+.cv{display:block;padding:8px 0;border-bottom:1px solid #e6e8ee}.cv b{display:block;font-size:24px;font-weight:800}.cv p{font-size:21px;font-weight:600;color:#4a5060;line-height:1.4}
+.pl{border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}.pl span{font-size:21px;font-weight:700;color:#5f6778}
+.pl b{font-size:27px;font-weight:800}.pl p{font-size:22px;font-weight:600;line-height:1.4}
+details.fold:not([open]){padding-top:14px;padding-bottom:14px}
+.gh{font-size:27px;font-weight:800;color:#191c23;margin:26px 2px -4px;padding:10px 16px;background:#e4e7ee;border-radius:14px}
+.am{border:2px solid #f3d58a;background:#fffaf0;border-radius:14px;padding:8px 14px 4px;margin-top:4px}
+.amh{font-size:18px;font-weight:800;color:#8a5a00;padding-bottom:4px}
+.amr{display:grid;grid-template-columns:100px 1fr;gap:10px;padding:7px 0;border-top:1px solid #f3e6c4;align-items:baseline}
+.amr span{font-size:17px;font-weight:800;color:#8a5a00} .amr p{font-size:20px;font-weight:600;line-height:1.45}
+.amps{margin:8px 0 6px;border:2px dashed #3b5bdb;border-radius:14px;padding:8px 12px;background:#f5f7ff} .amph{font-size:18px;font-weight:800;color:#2f4bc0;padding-bottom:4px}
+.amp{display:grid;grid-template-columns:86px 1fr;gap:10px;padding:8px 0;border-top:1px solid #dfe5ff;align-items:baseline} .amp span{color:#fff;background:#3b5bdb;border-radius:8px;padding:2px 6px;text-align:center;font-size:18px;font-weight:800}
+.amp p{font-size:21px;font-weight:700;color:#2f4bc0;line-height:1.5}
+.rnx{margin:12px 0 4px;border:2px dashed #3b5bdb;border-radius:14px;padding:12px 16px;background:#f5f7ff;text-align:center}
+.rnx span{display:block;font-size:19px;font-weight:800;color:#2f4bc0} .rnx b{display:block;font-size:34px;font-weight:900;color:#14171f;margin:4px 0}
+.rnx table{width:100%;border-collapse:collapse;margin-top:6px} .rnx th{font-size:17px;color:#5f6778;font-weight:700;padding:4px}
+.rnx td{font-size:19px;font-weight:700;padding:7px 4px;border-top:1px solid #dfe5ff;color:#2f4bc0;word-break:keep-all} .rnx td b{font-size:21px;color:#14171f;white-space:nowrap}
+.rnx tr.rnm td{border-top:0;padding:0 4px 10px;font-size:18px;font-weight:600;color:#4a5060;text-align:left;line-height:1.45}
+.rnx .rwy{font-size:19px;color:#1f2430;font-weight:600} .rnx .rwy .pill{display:inline-block;width:auto;margin:0 6px 0 0;padding:2px 10px;font-size:16px;vertical-align:1px} .rnx .rcd{margin-top:4px;color:#4a5060}
+.rgo{margin:12px 0 4px;border:2px dashed #3b5bdb;border-radius:14px;padding:10px 14px;background:#f5f7ff;font-size:19px;font-weight:700;color:#2f4bc0}
+.rnx em{display:block;font-style:normal;font-size:19px;font-weight:700;color:#2f4bc0} .rnx p{font-size:19px;color:#4a5060;margin-top:6px;line-height:1.45;text-align:left}
+.pss{text-align:center;padding:12px 10px} .pss span{display:block;font-size:20px;font-weight:800;color:#2f4bc0}
+.pss b{display:block;font-size:60px;font-weight:900;line-height:1.1} .pss b small{font-size:28px} .pss em{display:block;font-style:normal;font-size:19px;font-weight:700;color:#1f2430}
+.tyl summary::-webkit-details-marker{display:none} .tyl summary em::after{content:'펼치기 ▾'} .tyl[open] summary em::after{content:'접기 ▴'}
+.pss i{display:block;font-style:normal;font-size:17px;color:#5f6778;margin-top:6px}
+.pst{margin:8px auto 0;border-collapse:collapse;font-size:19px} .pst td{padding:4px 12px;border-top:1px solid #eceef3;text-align:left}
+.ts{display:block;font-size:17px;font-weight:600;color:#5f6778;margin-top:4px}
+.mn{font-size:22px!important;line-height:1.5!important}
+.sv{padding:9px 0;border-top:1px solid #eceef3} .sv div{display:flex;justify-content:space-between;align-items:center}
+.sv b{font-size:23px;font-weight:800} .sv i{font-style:normal;font-size:18px;font-weight:800;border-radius:8px;padding:2px 10px}
+.sv p{font-size:20px;font-weight:600;color:#4a5060;line-height:1.45;margin-top:3px}
+.sm3 ol{margin:0;padding-left:30px;display:flex;flex-direction:column;gap:8px;font-size:25px;font-weight:700;line-height:1.4}
+details.fold summary{font-size:28px;font-weight:800;list-style:none;cursor:pointer;padding:4px 0}details.fold summary .tg{float:none;margin-left:8px}details.fold summary::-webkit-details-marker{display:none}
+details.fold summary em{float:right;font-style:normal;font-size:20px;color:#5f6778;background:#f2f3f7;border-radius:99px;padding:4px 12px;margin-top:4px}
+details.fold summary em::after{content:'펼치기 ▾'}details.fold[open] summary em::after{content:'접기 ▴'}
+.fcs{display:flex;gap:10px}.fcs .fc{flex:1}.fc{text-align:center;font-size:22px;font-weight:800;color:#5f6778;background:#f2f3f7;border-radius:12px;padding:12px;cursor:pointer}details.fold[open] summary{margin-bottom:10px}
+.stale{background:#fff0f0;color:#c23b3b;border-radius:12px;padding:10px 14px;font-size:22px;font-weight:800}
+.rv{width:100%;border-collapse:collapse;font-size:22px}.rv th{font-size:19px;color:#5f6778;font-weight:700;text-align:left;padding:6px 4px}
+.rv td{font-weight:700;padding:10px 4px;border-top:1px solid #eceef3;vertical-align:top}.rv td:last-child{word-break:keep-all}
+.tg{float:right;font-size:19px;font-weight:600;color:#5f6778;background:#f2f3f7;border-radius:99px;padding:4px 12px;margin-top:4px}
+.mn{background:#fff6e0;border-radius:14px;padding:14px 16px;font-size:24px;font-weight:700;line-height:1.4}
+.mn span{display:block;font-size:20px;color:#a26b00;font-weight:800;margin-bottom:2px}
+.prog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.prog div{text-align:center;border-radius:12px;padding:8px 0;font-size:20px;font-weight:700;background:#f2f3f7;color:#5f6778}
+.prog a{text-align:center;border-radius:12px;padding:8px 0;font-size:20px;font-weight:700;text-decoration:none}
+.prog .on{background:#191c23;color:#fff} .prog .done{background:#e4e7ee;color:#191c23;box-shadow:inset 0 0 0 2px #c9ced8}
+.prog .off{background:#f2f3f7;color:#c3c7d0}
+.ft3 tr.me th,.ft3 tr.me td{background:#fff6e0} .ft3 tr.avg th,.ft3 tr.avg td{color:#5f6778;font-size:21px}
+.art{display:block;text-decoration:none;color:#191c23;font-size:22px;font-weight:700;line-height:1.35;padding:10px 0;border-bottom:1px solid #e4e7ee}
+.art span{display:block;font-size:19px;color:#5f6778;font-weight:600} .art::after{content:" ›";color:#5f6778}
+.dd{display:inline-block;min-width:66px;text-align:center;background:#191c23;color:#fff;border-radius:8px;padding:2px 8px;font-size:20px;margin-right:6px}
+.ft3{width:100%;border-collapse:collapse;font-size:24px} .ft3 th,.ft3 td{padding:8px 4px;text-align:right;border-bottom:1px solid #eef0f4}
+.ft3 th:first-child{text-align:left} .ft3 tr:first-child th{font-size:20px;color:#5f6778} .ft3 td{font-weight:800}
+.drv{display:grid;grid-template-columns:150px 1fr;gap:10px;align-items:baseline;padding:4px 0}
+.drv span{font-size:22px;font-weight:700;color:#5f6778} .drv em{font-style:normal;font-weight:800} .drv b{font-size:25px;font-weight:800;line-height:1.35}
+.g3x{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px} .g3x .tile b{font-size:30px} .g3x[style*="repeat(4"] .tile{padding-left:10px;padding-right:6px} .g3x[style*="repeat(4"] .tile b{font-size:22px;letter-spacing:-.5px}
+.g3v{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px} .g3v .vw{padding:12px 12px} .g3v .vw b{font-size:28px} .g3v .vw p{font-size:20px}
+.wk{grid-column:1/-1;display:flex;gap:8px} .wk span{background:#f2f3f7;border-radius:10px;padding:4px 12px;font-size:20px;color:#5f6778;font-weight:600}
+.wk em{font-style:normal;font-weight:800}
+.pill{display:inline-block;font-size:22px;font-weight:800;border-radius:99px;padding:4px 14px;margin-left:8px;vertical-align:3px}
+.bar{display:flex;height:26px;border-radius:13px;overflow:hidden} .bar i{display:block;height:100%}
+.bl{display:flex;justify-content:space-between;font-size:22px;font-weight:700;margin-top:6px}
+.sub{font-size:24px;font-weight:800;margin-top:6px}
+.kv{display:flex;justify-content:space-between;font-size:24px;font-weight:600;padding:6px 0} .kv b{font-weight:800}
+.hist{display:block;text-align:center;background:#191c23;color:#fff;font-size:26px;font-weight:800;border-radius:18px;padding:18px;text-decoration:none}
+
+body{gap:24px!important;padding:30px 22px 40px!important}
+.box{padding:28px 24px;gap:20px;border-radius:24px;box-shadow:0 2px 6px rgba(20,30,60,.06)}
+details.fold{border-left:8px solid var(--g,#c9ced8)}
+details.fold:not([open]){padding-top:24px;padding-bottom:24px}
+details.fold summary{font-size:30px;color:#14171f;line-height:1.3} details.fold[open] summary{margin-bottom:6px;padding-bottom:14px;border-bottom:2px solid #eef0f4}
+details.fold summary em{font-size:18px;padding:6px 14px}
+.gh{font-size:27px!important;color:#fff!important;background:var(--g,#5f6778)!important;margin:40px 0 -4px!important;padding:14px 20px!important;border-radius:16px!important}
+.grp{padding:18px 20px;border-radius:18px} .grp h5,.fh,.sub{font-size:23px;font-weight:800;color:#3a4152;margin-bottom:10px}
+.mn{padding:16px 18px;font-size:22px!important;line-height:1.6!important;font-weight:600;border-left:6px solid #f0c040}
+.mn span{font-size:20px;margin-bottom:6px;color:#7a4500} .mn{color:#1f2430}
+.am{margin-top:4px;padding:14px 18px 8px;border-radius:16px} .amh{font-size:18px;padding-bottom:8px}
+.amr{padding:11px 0;gap:14px;grid-template-columns:136px 1fr} .amr p{font-size:22px;line-height:1.55;color:#1f2430} .amr span{font-size:19px;color:#7a4500} .amr.am5 span{font-size:18px;color:#fff} .amr.am5 p{color:#2f4bc0}
+.kd{font-size:18px!important;padding:3px 10px!important;margin-right:10px!important;border-radius:8px!important}
+.op{gap:14px} .op li{font-size:23px;line-height:1.55}
+.sm3 ol{gap:14px!important;font-size:24px!important;line-height:1.55!important}
+.cv{padding:14px 0} .cv b{margin-bottom:4px} .pw{padding:14px 0} .sv{padding:14px 0} .ind{padding:12px 0}
+.pl{padding:18px 20px;gap:8px} .rv td{padding:14px 6px;line-height:1.45}
+.kv{padding:8px 0} .vw{padding:16px 18px} .grid2{gap:14px}
+.fc{margin-top:8px;padding:14px;font-size:21px}
+.hist{margin-top:12px}
+body{word-break:keep-all;overflow-wrap:anywhere}
+.kv{gap:14px;align-items:baseline} .kv{flex-wrap:wrap} .kv>span{flex:1 1 auto;min-width:8em} .kv>b{flex:0 1 auto;max-width:100%;text-align:right;margin-left:auto}
+.kvs{padding:14px 0;border-bottom:2px solid #eef0f4;display:flex;flex-direction:column;gap:6px} .kvs:last-of-type{border-bottom:0}
+.kvs>span{font-size:20px;font-weight:700;color:#5f6778} .kvs>b{font-size:23px;font-weight:800;line-height:1.5}
+.pf-h{font-size:22px;font-weight:800;color:#3a4152;margin-top:6px} .pf-h small{font-size:19px;font-weight:700;color:#5f6778;margin-left:6px}
+.pf-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px} .pf-row.pf-3{grid-template-columns:repeat(3,minmax(0,1fr))} .pf-f,.pf-p{min-width:0}
+.pf-p{background:#f2f3f7;border-radius:14px;padding:12px 10px;text-align:center} .pf-p span{display:block;font-size:18px;font-weight:700;color:#5f6778}
+.pf-p b{display:block;font-size:24px;font-weight:800;letter-spacing:-.5px;overflow-wrap:anywhere}
+table{table-layout:fixed;width:100%} td,th{overflow-wrap:anywhere;word-break:keep-all}
+.pf-f{border:2px dashed var(--k);border-radius:14px;padding:12px 12px;display:flex;flex-direction:column;gap:6px}
+.pf-f span{font-size:19px;font-weight:800;color:#5f6778} .pf-f b{font-size:22px;font-weight:800;color:var(--k);line-height:1.3}
+.pf-f em{font-style:normal;font-size:19px;font-weight:800;color:#fff;background:var(--k);border-radius:10px;padding:6px 8px;white-space:normal;word-break:keep-all;letter-spacing:-.4px;text-align:center}
+.pf-f em small{display:block;font-size:17px;font-weight:700}
+.li2{display:block;font-style:normal;padding-left:1em;text-indent:-1em;color:#3a4152;margin-top:4px}
+.sum.vs{display:block!important;margin-top:6px;padding:12px 16px;background:#f2f3f7;border-radius:14px}
+.pf-f p{font-size:20px;font-weight:600;line-height:1.5;color:#3a4152}
+.fx{display:grid!important;grid-template-columns:1fr auto;grid-template-areas:"n c" "t t";gap:8px 12px;padding:18px 0!important;border-bottom:2px solid #eef0f4;align-items:center}
+.fx:last-of-type{border-bottom:0} .fx>b{grid-area:n;font-size:24px!important} .fx>i{grid-area:c;font-size:19px!important}
+.fx>span{grid-area:t;font-size:21px!important;line-height:1.55!important;color:#1f2430!important;font-weight:500}
+.tile p{font-size:19px!important}
+.plc{background:#fff!important;border-left:8px solid var(--k);gap:10px!important;padding:18px 18px!important;box-shadow:0 1px 3px rgba(20,30,60,.08)}
+.grp:has(.plc){display:flex;flex-direction:column;gap:16px}
+.plc span{color:#3a4152!important;font-size:21px!important;line-height:1.45} .pln{font-style:normal;font-size:18px;font-weight:800;color:#fff;background:var(--k);border-radius:8px;padding:2px 9px;margin-right:8px;vertical-align:2px}
+.plc b{font-size:26px!important;line-height:1.35} .plc p{border-top:2px dashed #e6e8ee;padding-top:10px;color:#1f2430;font-size:21px!important;line-height:1.55!important}
+.plc p em{display:block;font-style:normal;font-size:18px;font-weight:800;color:#5f6778;margin-bottom:4px}
+.li.nd{padding-left:0;text-indent:0}
+.hqp{color:#1f2430!important;font-size:22px!important;font-weight:600!important;line-height:1.55!important}
+.vw p{line-height:1.55!important;color:#1f2430}
+.ctbar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:6px}
+.ctb{font:inherit;font-size:19px;font-weight:800;padding:10px 0;border:0;border-radius:10px;background:#f2f3f7;color:#3a4152}
+.cml{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:4px 0 10px;font-size:19px;font-weight:700;color:#1f2430}
+.cml b{font-size:19px;font-weight:800;color:#8a5a00;background:#fff4d6;border-radius:8px;padding:3px 9px}
+.cml span{display:inline-flex;align-items:center;gap:6px;min-width:0} .cml i{display:inline-block;width:26px;height:6px;border-radius:3px}
+.cml small{flex-basis:100%;font-size:18px;color:#5f6778;font-weight:600}
+.cvm{display:inline-flex;align-items:center;gap:6px;margin:4px 0 2px;font-size:18px;font-weight:800;color:#8a5a00;background:#fff4d6;border-radius:8px;padding:3px 9px}
+.cvm i{display:inline-block;width:20px;height:6px;border-radius:3px}
+.ctb.on{background:#1971c2;color:#fff} .ctp{display:none} .ctp.on{display:block} .ctp svg{max-width:100%;height:auto}
+.li{display:block;font-style:normal;padding-left:1.05em;text-indent:-1.05em;margin:2px 0}
+.op li::marker{color:#3b5bdb}
+@font-face{font-family:P;font-weight:400;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-Regular.woff2) format('woff2')}@font-face{font-family:P;font-weight:600;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-SemiBold.woff2) format('woff2')}@font-face{font-family:P;font-weight:800;src:url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/woff2/Pretendard-ExtraBold.woff2) format('woff2')}body{margin:0 auto;padding-bottom:40px}</style></head><body><div class="hd"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-width:0"><div class="name" style="margin-right:4px">현대건설</div><span style="font-size:19px;font-weight:800;line-height:1;white-space:nowrap;border-radius:99px;padding:5px 9px;color:#7a4b00;background:#7a4b0017;box-shadow:inset 0 0 0 2px #7a4b0055">가치주</span><span style="font-size:19px;font-weight:800;line-height:1;white-space:nowrap;border-radius:99px;padding:5px 9px;color:#a84a00;background:#a84a0017;box-shadow:inset 0 0 0 2px #a84a0055">경기민감주</span><span style="font-size:19px;font-weight:800;line-height:1;white-space:nowrap;border-radius:99px;padding:5px 9px;color:#8e24aa;background:#8e24aa17;box-shadow:inset 0 0 0 2px #8e24aa55">테마주</span></div><div class="slot">주간 리뷰 · 월간 리뷰</div></div><div class="when" style="margin-top:-8px">10.19 (월) 08:08 업데이트</div><div class="box"><div style="display:flex;justify-content:space-between;align-items:baseline"><div class="price" style="font-size:56px">93,800원</div><div class="chg" style="color:#191c23">▲ +0.00%</div></div><div style="font-size:22px;color:#5f6778;font-weight:600">지난 거래일 종가</div></div><details class="box fold" style="--g:#3b5bdb;border:3px solid #3b5bdb;border-left-width:8px"><summary>📋 주간 리뷰 · 10/12~10/18<span style="display:block;font-size:20px;color:#5f6778;font-weight:700;margin-top:2px">🗓 2026.10.19(월) 08:08 업데이트 · 내용 고정</span> <em></em></summary><style>
+.rvw{display:flex;flex-direction:column;gap:14px}
+.rvw .rvhl{background:#1b1f2a;color:#fff;border-radius:16px;padding:16px 18px;font-size:24px;font-weight:800;line-height:1.4}
+.rvw .rvhl span{display:block;font-size:19px;color:#c9d1e0;font-weight:700;margin-bottom:4px}
+.rvw .rvsc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rvw .rvsc div{background:#f2f3f7;border-radius:14px;padding:10px 6px;text-align:center}
+.rvw .rvsc span{display:block;font-size:19px;font-weight:700;color:#5f6778}.rvw .rvsc b{font-size:28px;font-weight:800}
+.rvw .rvsec{border-radius:18px;overflow:hidden;border:2px solid var(--c)}
+.rvw .rvsec>h4{background:var(--c);color:#fff;font-size:25px;font-weight:800;padding:12px 16px;margin:0}
+.rvw .rvsec>.rvin{padding:12px 14px 14px;display:flex;flex-direction:column;gap:12px}
+.rvw h6{font-size:21px;font-weight:800;color:var(--c);margin:4px 0 -4px;display:flex;align-items:center;gap:8px}
+.rvw h6::before{content:'';width:6px;height:20px;border-radius:3px;background:var(--c)}
+.rvw .rvit{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:start;background:#f7f8fb;border-radius:14px;padding:10px 12px}
+.rvw .rvit .rvmk{text-align:center;font-size:30px;line-height:1}.rvw .rvit .rvmk small{display:block;font-size:19px;font-weight:800;margin-top:4px}
+.rvw .rvit b{display:block;font-size:22px;font-weight:800;line-height:1.35}
+.rvw .rvit p{font-size:18px;font-weight:600;color:#6b7280;line-height:1.35;margin-top:3px}
+.rvw .rvfx{background:#f7f8fb;border-radius:14px;padding:10px 12px}
+.rvw .rvfx b{font-size:22px;font-weight:800}.rvw .rvfx p{font-size:18px;font-weight:600;color:#6b7280;margin-top:2px}
+.rvw .rvfx .rvpr{margin-top:6px;background:#eef3ff;color:#2f4bc0;border-radius:10px;padding:6px 10px;font-size:20px;font-weight:800;line-height:1.35}
+.rvw .rvai{font-style:normal;font-size:18px;font-weight:800;color:#fff;background:#3b5bdb;border-radius:8px;padding:2px 8px;margin-right:8px;vertical-align:2px}
+.rvw .rvtg{float:none;font-style:normal;font-size:19px;font-weight:800;border-radius:8px;padding:2px 8px;margin-left:6px;vertical-align:3px;background:#fff1e6;color:#a84a00}
+.rvw .rvnote{background:#fff8e6;border-radius:12px;padding:8px 12px;font-size:19px;font-weight:700}
+.rvw .rvbig{border-radius:16px;padding:14px 16px;border:3px solid var(--k);background:var(--kb)}
+.rvw .rvbig span{font-size:18px;font-weight:800;color:#5f6778}.rvw .rvbig b{display:block;font-size:34px;font-weight:800;color:var(--k);margin:2px 0}
+.rvw .rvbig p{font-size:20px;font-weight:700;line-height:1.4}
+.rvw .rvscan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.rvw .rvscan div{background:#f7f8fb;border-radius:12px;padding:8px 10px;border-left:5px solid var(--k)}
+.rvw .rvscan b{font-size:19px;font-weight:800}.rvw .rvscan em{font-style:normal;font-size:19px;font-weight:800;color:var(--k);margin-left:4px}
+.rvw .rvscan p{font-size:19px;font-weight:600;color:#4a5263;line-height:1.3;margin-top:2px}
+</style><div class="rvw"><div class="rvhl"><span>한 줄 총평</span>코스피 폭락에 현대건설 1주 -12.2% · 금요일 93,300원으로 반등 마감</div><div class="rvsc"><div><span>가격 예상</span><b style="color:#c92a2a">⭕ 맞음</b></div><div><span>AI 의견</span><b>1.5/3</b></div><div><span>상황 예상</span><b>1.5/5</b></div></div><div class="rvsec" style="--c:#0b7285"><h4>🌐 시장 · 코스피·경제</h4><div class="rvin"><h6>지난주 등락률</h6><div style="display:flex;flex-direction:column;gap:6px;margin:6px 0"><div style="display:grid;grid-template-columns:120px 1fr 92px;align-items:center;gap:8px;font-size:22px;font-weight:800"><span>코스피</span><div style="position:relative;height:36px;background:#f2f3f7;border-radius:8px"><i style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:#c9ced8"></i><i style="position:absolute;top:6px;bottom:6px;right:50%;width:48%;background:#1c58c4;border-radius:6px;opacity:0.55"></i></div><span style="text-align:right;color:#1c58c4">-14.5%</span></div><div style="display:grid;grid-template-columns:120px 1fr 92px;align-items:center;gap:8px;font-size:22px;font-weight:800"><span>현대건설</span><div style="position:relative;height:36px;background:#f2f3f7;border-radius:8px"><i style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:#c9ced8"></i><i style="position:absolute;top:6px;bottom:6px;right:50%;width:40%;background:#1c58c4;border-radius:6px;opacity:1"></i></div><span style="text-align:right;color:#1c58c4">-12.2%</span></div><div style="display:grid;grid-template-columns:120px 1fr 92px;gap:8px;font-size:19px;font-weight:700;color:#5f6778"><span></span><div style="display:flex;justify-content:space-between"><span>← 내림 (파랑)</span><span>0</span><span>오름 (빨강) →</span></div><span></span></div></div><div class="rvnote">현대건설은 시장보다 2.3%p 더 올랐음</div><h6>지난주 무슨 일 · AI 예상과 비교</h6><div class="rvit"><div class="rvmk">❔<small style="color:#5f6778">예상 못함</small></div><div><b>코스피 1주 -14.5% (6,625.93 → 5,668.05) · 10/15 하루 5,554까지 떨어짐<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>AI 예상 · 지난 기간 알림에 코스피 폭락 예상 없음</p></div></div><div class="rvit"><div class="rvmk">⭕<small style="color:#c92a2a">맞음</small></div><div><b>10/16 코스피 5,668로 반등 (전날 5,554)<em class="rvtg" style="background:#fdecec;color:#c92a2a">호재</em></b><p>AI 예상 · 10/16 AI 예상: 코스피 1~2주 흔들리며 반등 시도 (10/16)</p></div></div><div class="rvnote">📌 주말·휴장 중: 미국 S&P500 10/16 -1.1% (7,659) · 나스닥 -2.1% · 반도체 등 기술주가 하락을 이끎 (AP, 10/16)</div><h6>이번 주 볼 변수 · AI 예상</h6><div class="rvfx"><b>외국인 대량 매도</b><em class="rvtg">유지</em><em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em><p>10/15 하루 외국인이 코스피에서 3.8조원 매도 (10/15 알림)</p><div class="rvpr"><em class="rvai">AI 예상</em>1주 안에 외국인이 코스피를 하루라도 순매수할 가능성 55%</div></div><div class="rvfx"><b>10/22 금통위(한국은행 금리 결정 회의)</b><em class="rvtg">새로</em><em class="rvtg" style="background:#f2f3f7;color:#191c23">중립</em><p>금리 신호가 건설주 심리에 영향</p><div class="rvpr"><em class="rvai">AI 예상</em>10/22 한국 기준금리가 동결될 가능성 70%</div></div><div class="rvfx"><b>미국 기술주 약세</b><em class="rvtg">새로</em><em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em><p>10/16 나스닥 -2.1%로 1주 -4.5% (AP, 10/16)</p><div class="rvpr"><em class="rvai">AI 예상</em>1주 안에 코스피가 하루 -3% 넘게 떨어지는 날이 나올 가능성 35%</div></div><div class="rvbig" style="--k:#191c23;--kb:#f2f3f7"><span>이번 주 코스피 예상</span><p style="font-size:23px;font-weight:800;color:#191c23">10/23 코스피 종가가 5,400~6,000 사이일 가능성 65%</p></div></div></div><div class="rvsec" style="--c:#c2410c"><h4>🏢 현대건설 · 종목</h4><div class="rvin"><h6>지난주 가격 · 예상 vs 실제</h6><div style="position:relative;height:118px;margin:4px 6px"><div style="position:absolute;left:28.3%;top:0;transform:translateX(-50%);white-space:nowrap;font-size:19px;font-weight:800;color:#191c23">실제 93,300 ⭕</div><i style="position:absolute;left:28.3%;top:28px;height:44px;width:4px;margin-left:-2px;background:#191c23"></i><div style="position:absolute;left:0;right:0;top:42px;height:16px;background:#eceef3;border-radius:8px"></div><div style="position:absolute;left:6.9%;width:54.8%;top:38px;height:24px;background:#ffd66b;border-radius:8px"></div><div style="position:absolute;left:34.3%;top:74px;transform:translateX(-50%);white-space:nowrap;font-size:19px;font-weight:800;color:#a26b00">예상 89,000~100,000</div><i style="position:absolute;left:93.1%;top:40px;width:12px;height:20px;margin-left:-6px;border-radius:50%;background:#5f6778"></i><div style="position:absolute;left:93.1%;top:96px;transform:translateX(-100%);white-space:nowrap;font-size:19px;font-weight:800;color:#5f6778">출발 106,300</div></div><p style="font-size:18px;color:#5f6778;font-weight:600;margin-top:-6px">예상 근거 · 10/14~10/16 알림 속 단기(1~2주) 예상 범위</p><div class="kv"><span>실제</span><b>106,300 → 93,300원 <em style="font-style:normal;color:#1c58c4">(-12.2%)</em></b></div><p style="font-size:19px;color:#5f6778;font-weight:600;margin-top:-8px">기간 고가 104,500 · 저가 88,900 · 네이버 일별 종가 (장 마감 뒤 거래 포함)</p><h6>지난주 AI 의견 · 맞았나</h6><div class="rvit"><div class="rvmk">❌<small style="color:#1c58c4">틀림</small></div><div><b>1~2주는 10만원 근처에서 바닥 다지기 (10/14)<em class="rvtg" style="background:#f2f3f7;color:#191c23">중립</em></b><p>실제 · 1주 뒤 93,300원 · 10/15 종가 88,900원까지 밀림</p></div></div><div class="rvit"><div class="rvmk">🔺<small style="color:#a84a00">절반</small></div><div><b>1~2주는 9만원 아래 8만원대 시험 우세 (10/15)<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>실제 · 10/15 종가 88,900원 · 다음날 93,300원으로 반등</p></div></div><div class="rvit"><div class="rvmk">⭕<small style="color:#c92a2a">맞음</small></div><div><b>보유 유지 · 반등을 쫓아 한 번에 사지 않기 (10/16)<em class="rvtg" style="background:#f2f3f7;color:#191c23">중립</em></b><p>실제 · 10/16 장중 고점 뒤 93,300원으로 마감</p></div></div><h6>지난주 무슨 일 · AI 예상과 비교</h6><div class="rvit"><div class="rvmk">❌<small style="color:#1c58c4">틀림</small></div><div><b>현대건설 1주 -12.2% (106,300원 → 93,300원) · 10/15 종가 88,900원<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>AI 예상 · 1~2주는 10만원 근처 바닥 다지기 (10/14)</p></div></div><div class="rvit"><div class="rvmk">❔<small style="color:#5f6778">예상 못함</small></div><div><b>신한투자증권 목표주가 17만 → 14만원 하향 (10/15 알림)<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>AI 예상 · 지난 기간 알림에 목표가 하향 예상 없음</p></div></div><div class="rvit"><div class="rvmk">🔺<small style="color:#a84a00">절반</small></div><div><b>10/16 93,300원으로 반등<em class="rvtg" style="background:#fdecec;color:#c92a2a">호재</em></b><p>AI 예상 · 1~2주는 8만원대 시험 우세 (10/15)</p></div></div><h6>이번 주 볼 변수 · AI 예상</h6><div class="rvfx"><b>3분기 실적 발표</b><em class="rvtg">유지</em><em class="rvtg" style="background:#fdecec;color:#c92a2a">호재</em><p>하나증권 '3분기 영업이익 작년보다 2배' 전망 (10/16 알림)</p><div class="rvpr"><em class="rvai">AI 예상</em>10/23까지 현대건설이 3분기 실적 발표일을 공시할 가능성 70%</div></div><div class="rvfx"><b>기관 매도</b><em class="rvtg">유지</em><em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em><p>10/16 기관이 현대건설 81억원 순매도 (10/16 알림)</p><div class="rvpr"><em class="rvai">AI 예상</em>1주 안에 기관이 하루라도 현대건설을 순매수할 가능성 75%</div></div><div class="rvfx"><b>원전 계약 소식</b><em class="rvtg">유지</em><em class="rvtg" style="background:#fdecec;color:#c92a2a">호재</em><p>웨스팅하우스 지분 투자 '팀 코리아' 참여 검토 (10/15 알림)</p><div class="rvpr"><em class="rvai">AI 예상</em>1주 안에 원전 신규 계약 공시가 나올 가능성 10%</div></div><div class="rvbig" style="--k:#191c23;--kb:#f2f3f7"><span>이번 주 현대건설 예상</span><b>◆ 박스권 · 94,000원</b><p>범위 88,000 ~ 100,000원 · 확률 60%</p><p style="color:#4a5060">코스피 급락이 멈출지 아직 불확실 · 3분기 실적 기대가 아래를 받침 · 10/22 금통위 전까지 이 범위 안에서 오르내림 예상</p></div></div></div><div class="rvsec" style="--c:#2b7a3b"><h4>✅ 빠짐없이 봤나 · 8개 분야</h4><div class="rvin"><div class="rvscan"><div style="--k:#1c58c4"><b>✓ 코스피·시장 흐름</b><em style="color:#c23b3b">영향 큼</em><p>코스피 1주 -14.5%가 현대건설 하락의 가장 큰 원인으로 봄</p></div><div style="--k:#1c58c4"><b>✓ 외국인·기관 수급</b><em style="color:#c23b3b">영향 큼</em><p>외국인 시장 매도·기관 종목 매도가 이어질지를 변수로 넣음</p></div><div style="--k:#191c23"><b>✓ 금리·환율</b><em style="color:#a84a00">영향 보통</em><p>10/22 금통위 동결 가능성 70%로 반영</p></div><div style="--k:#1c58c4"><b>✓ 미국·해외 증시</b><em style="color:#a84a00">영향 보통</em><p>10/16 나스닥 -2.1%라 월요일 부담으로 반영</p></div><div style="--k:#191c23"><b>✓ 업종·테마</b><em style="color:#a84a00">영향 보통</em><p>건설·원전주가 같이 움직인다고 보고 업종 흐름 따라감</p></div><div style="--k:#c92a2a"><b>✓ 실적·공시·수주</b><em style="color:#c23b3b">영향 큼</em><p>3분기 실적 기대가 하단을 받친다고 보고 범위 하단을 88,000원으로 둠</p></div><div style="--k:#191c23"><b>✓ 뉴스·정책·정치</b><em style="color:#5f6778">영향 작음</em><p>원전 계약 소식은 1주 안 가능성 낮게 봄</p></div><div style="--k:#1c58c4"><b>✓ 차트·거래량</b><em style="color:#a84a00">영향 보통</em><p>20일 평균선(약 11.4만원)보다 한참 아래라 상단을 10만원으로 제한</p></div></div></div></div><div class="rvsec" style="--c:#3b5bdb"><h4>📊 AI 적중률 추이 · 이번 4/9</h4><div class="rvin"><div style="display:flex;gap:6px;align-items:flex-end;justify-content:center"><div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;max-width:120px"><b style="font-size:22px">44%</b><div style="width:60%;height:100px;background:#eceef3;border-radius:8px;display:flex;align-items:flex-end;overflow:hidden;position:relative"><i style="position:absolute;left:0;right:0;bottom:50%;border-top:2px dashed #b0b6c3"></i><i style="display:block;width:100%;height:44%;background:#3b5bdb"></i></div><span style="font-size:19px;color:#5f6778;font-weight:700">10/12주</span></div></div><p style="font-size:19px;color:#5f6778;font-weight:600">가격·의견·상황 예상 채점 (맞음 1, 절반 0.5) · 점선 = 찍기 50%</p></div></div><p style="font-size:19px;color:#5f6778;font-weight:600">이번 주 정기 알림에 같은 내용 고정 · AI 의견 · 투자 권유 아님</p></div><div class="fcs"><div class="fc" onclick="var d=this.closest('details');d.open=false;d.scrollIntoView({block:'start'})">접기 ▴</div><div class="fc" onclick="document.querySelectorAll('details').forEach(function(x){x.open=false});var f=document.querySelector('details.fold');if(f)f.scrollIntoView({block:'start'})">모두 접기 ▴▴</div></div></details><details class="box fold" style="--g:#3b5bdb;border:3px solid #3b5bdb;border-left-width:8px"><summary>📋 월간 리뷰 · 9/15~10/15<span style="display:block;font-size:20px;color:#5f6778;font-weight:700;margin-top:2px">🗓 2026.10.16(금) 02:46 업데이트 · 내용 고정 · 🧪 테스트 버전 (정식은 첫 정기 리뷰부터)</span> <em></em></summary><style>
+.rvw{display:flex;flex-direction:column;gap:14px}
+.rvw .rvhl{background:#1b1f2a;color:#fff;border-radius:16px;padding:16px 18px;font-size:24px;font-weight:800;line-height:1.4}
+.rvw .rvhl span{display:block;font-size:19px;color:#c9d1e0;font-weight:700;margin-bottom:4px}
+.rvw .rvsc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.rvw .rvsc div{background:#f2f3f7;border-radius:14px;padding:10px 6px;text-align:center}
+.rvw .rvsc span{display:block;font-size:19px;font-weight:700;color:#5f6778}.rvw .rvsc b{font-size:28px;font-weight:800}
+.rvw .rvsec{border-radius:18px;overflow:hidden;border:2px solid var(--c)}
+.rvw .rvsec>h4{background:var(--c);color:#fff;font-size:25px;font-weight:800;padding:12px 16px;margin:0}
+.rvw .rvsec>.rvin{padding:12px 14px 14px;display:flex;flex-direction:column;gap:12px}
+.rvw h6{font-size:21px;font-weight:800;color:var(--c);margin:4px 0 -4px;display:flex;align-items:center;gap:8px}
+.rvw h6::before{content:'';width:6px;height:20px;border-radius:3px;background:var(--c)}
+.rvw .rvit{display:grid;grid-template-columns:62px 1fr;gap:10px;align-items:start;background:#f7f8fb;border-radius:14px;padding:10px 12px}
+.rvw .rvit .rvmk{text-align:center;font-size:30px;line-height:1}.rvw .rvit .rvmk small{display:block;font-size:19px;font-weight:800;margin-top:4px}
+.rvw .rvit b{display:block;font-size:22px;font-weight:800;line-height:1.35}
+.rvw .rvit p{font-size:18px;font-weight:600;color:#6b7280;line-height:1.35;margin-top:3px}
+.rvw .rvfx{background:#f7f8fb;border-radius:14px;padding:10px 12px}
+.rvw .rvfx b{font-size:22px;font-weight:800}.rvw .rvfx p{font-size:18px;font-weight:600;color:#6b7280;margin-top:2px}
+.rvw .rvfx .rvpr{margin-top:6px;background:#eef3ff;color:#2f4bc0;border-radius:10px;padding:6px 10px;font-size:20px;font-weight:800;line-height:1.35}
+.rvw .rvai{font-style:normal;font-size:18px;font-weight:800;color:#fff;background:#3b5bdb;border-radius:8px;padding:2px 8px;margin-right:8px;vertical-align:2px}
+.rvw .rvtg{float:none;font-style:normal;font-size:19px;font-weight:800;border-radius:8px;padding:2px 8px;margin-left:6px;vertical-align:3px;background:#fff1e6;color:#a84a00}
+.rvw .rvnote{background:#fff8e6;border-radius:12px;padding:8px 12px;font-size:19px;font-weight:700}
+.rvw .rvbig{border-radius:16px;padding:14px 16px;border:3px solid var(--k);background:var(--kb)}
+.rvw .rvbig span{font-size:18px;font-weight:800;color:#5f6778}.rvw .rvbig b{display:block;font-size:34px;font-weight:800;color:var(--k);margin:2px 0}
+.rvw .rvbig p{font-size:20px;font-weight:700;line-height:1.4}
+.rvw .rvscan{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.rvw .rvscan div{background:#f7f8fb;border-radius:12px;padding:8px 10px;border-left:5px solid var(--k)}
+.rvw .rvscan b{font-size:19px;font-weight:800}.rvw .rvscan em{font-style:normal;font-size:19px;font-weight:800;color:var(--k);margin-left:4px}
+.rvw .rvscan p{font-size:19px;font-weight:600;color:#4a5263;line-height:1.3;margin-top:2px}
+</style><div class="rvw"><div class="rvhl"><span>한 줄 총평</span>현대건설은 1달 동안 29% 떨어졌습니다. 9/22 고점 뒤 조금씩 내려가다가 10월 코스피 급락 때 크게 빠졌습니다.</div><div class="rvsc"><div><span>가격 예상</span><b style="color:#5f6778">기록 없음</b></div><div><span>AI 의견</span><b>1/2</b></div><div><span>상황 예상</span><b>1/5</b></div></div><div class="rvsec" style="--c:#0b7285"><h4>🌐 시장 · 코스피·경제</h4><div class="rvin"><h6>최근 1달 등락률</h6><div style="display:flex;flex-direction:column;gap:6px;margin:6px 0"><div style="display:grid;grid-template-columns:120px 1fr 92px;align-items:center;gap:8px;font-size:22px;font-weight:800"><span>코스피</span><div style="position:relative;height:36px;background:#f2f3f7;border-radius:8px"><i style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:#c9ced8"></i><i style="position:absolute;top:6px;bottom:6px;right:50%;width:28%;background:#1c58c4;border-radius:6px;opacity:0.55"></i></div><span style="text-align:right;color:#1c58c4">-16.9%</span></div><div style="display:grid;grid-template-columns:120px 1fr 92px;align-items:center;gap:8px;font-size:22px;font-weight:800"><span>현대건설</span><div style="position:relative;height:36px;background:#f2f3f7;border-radius:8px"><i style="position:absolute;left:50%;top:0;bottom:0;width:2px;background:#c9ced8"></i><i style="position:absolute;top:6px;bottom:6px;right:50%;width:48%;background:#1c58c4;border-radius:6px;opacity:1"></i></div><span style="text-align:right;color:#1c58c4">-29.2%</span></div><div style="display:grid;grid-template-columns:120px 1fr 92px;gap:8px;font-size:19px;font-weight:700;color:#5f6778"><span></span><div style="display:flex;justify-content:space-between"><span>← 내림 (파랑)</span><span>0</span><span>오름 (빨강) →</span></div><span></span></div></div><div class="rvnote">현대건설은 시장보다 12.3%p 더 빠졌음</div><h6>최근 1달 무슨 일 · AI 예상과 비교</h6><div class="rvit"><div class="rvmk">❔<small style="color:#5f6778">예상 못함</small></div><div><b>코스피가 1달 동안 17% 떨어짐. 10월 둘째 주에 크게 빠짐<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>AI 예상 · AI 기록 없음 (알림은 10/14부터)</p></div></div><div class="rvit"><div class="rvmk">❌<small style="color:#1c58c4">틀림</small></div><div><b>10/14~15에 코스피가 6,000 아래로 내려감<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>AI 예상 · 10/14 예상: 코스피가 6,000 위에서 버팀</p></div></div><div class="rvnote">📌 주말·휴장 중: 추석 연휴로 9/24~9/25 휴장. 연휴 뒤에도 하락이 이어짐</div><h6>다음 1달 볼 변수 · AI 예상</h6><div class="rvfx"><b>외국인이 한국 주식 팔기를 멈출까</b><em class="rvtg">유지</em><em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em><p>1달 하락의 가장 큰 원인입니다.</p><div class="rvpr"><em class="rvai">AI 예상</em>11월 안에 외국인이 1주 동안 코스피를 순매수로 돌아설 가능성 50%</div></div><div class="rvfx"><b>한국(10/22)·미국(10/29) 금리 결정</b><em class="rvtg">새로</em><em class="rvtg" style="background:#f2f3f7;color:#191c23">중립</em><p>두 나라 금리 결정이 시장 방향을 정합니다.</p><div class="rvpr"><em class="rvai">AI 예상</em>한국과 미국 둘 다 기준금리를 그대로 둘 가능성 65%</div></div><div class="rvfx"><b>반도체 회사들 3분기 실적</b><em class="rvtg">새로</em><em class="rvtg" style="background:#fdecec;color:#c92a2a">호재</em><p>코스피에서 반도체 비중이 커서 시장 회복의 열쇠입니다.</p><div class="rvpr"><em class="rvai">AI 예상</em>삼성전자·SK하이닉스 실적이 예상만큼 나올 가능성 60%</div></div><div class="rvbig" style="--k:#191c23;--kb:#f2f3f7"><span>다음 1달 코스피 예상</span><p style="font-size:23px;font-weight:800;color:#191c23">다음 1달 코스피는 5,300~6,200 사이에서 바닥을 다질 가능성 50%</p></div></div></div><div class="rvsec" style="--c:#c2410c"><h4>🏢 현대건설 · 종목</h4><div class="rvin"><h6>최근 1달 가격 · 예상 vs 실제</h6><div class="rvnote">이 기간 가격 예상 기록 없음 (알림 기록 쌓이는 중)</div><div class="kv"><span>실제</span><b>125,500 → 88,900원 <em style="font-style:normal;color:#1c58c4">(-29.2%)</em></b></div><p style="font-size:19px;color:#5f6778;font-weight:600;margin-top:-8px">기간 고가 136,100 · 저가 88,900 · 네이버 일별 종가 (장 마감 뒤 거래 포함)</p><h6>최근 1달 AI 의견 · 맞았나</h6><div class="rvit"><div class="rvmk">❌<small style="color:#1c58c4">틀림</small></div><div><b>10/14 예상: 1~2주 동안 10만원 근처에서 버팀<em class="rvtg" style="background:#f2f3f7;color:#191c23">중립</em></b><p>실제 · 10/15에 88,900원으로 10만원 아래로 내려감</p></div></div><div class="rvit"><div class="rvmk">⭕<small style="color:#c92a2a">맞음</small></div><div><b>10/15 예상: 8만원대까지 떨어짐<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>실제 · 같은 날 8만원대에 들어감 (1달 중 가장 낮음)</p></div></div><h6>최근 1달 무슨 일 · AI 예상과 비교</h6><div class="rvit"><div class="rvmk">❔<small style="color:#5f6778">예상 못함</small></div><div><b>9/22 종가 131,800원으로 1달 중 가장 높았음<em class="rvtg" style="background:#fdecec;color:#c92a2a">호재</em></b><p>AI 예상 · AI 기록 없음 (알림은 10/14부터)</p></div></div><div class="rvit"><div class="rvmk">❔<small style="color:#5f6778">예상 못함</small></div><div><b>9/23~10/8 동안 106,300원까지 조금씩 떨어짐 (-19%)<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>AI 예상 · AI 기록 없음 (알림은 10/14부터)</p></div></div><div class="rvit"><div class="rvmk">⭕<small style="color:#c92a2a">맞음</small></div><div><b>10/15 88,900원으로 1달 중 가장 낮음. 시장보다 더 빠짐<em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em></b><p>AI 예상 · 10/15 예상: 8만원대까지 떨어짐</p></div></div><h6>다음 1달 볼 변수 · AI 예상</h6><div class="rvfx"><b>3분기 실적 발표</b><em class="rvtg">새로</em><em class="rvtg" style="background:#fdecec;color:#c92a2a">호재</em><p>본업 이익이 늘었는지 확인하면 반등 계기가 됩니다.</p><div class="rvpr"><em class="rvai">AI 예상</em>영업이익이 증권사 예상만큼 나올 가능성 60%</div></div><div class="rvfx"><b>원전 투자 참여 확정</b><em class="rvtg">새로</em><em class="rvtg" style="background:#f2f3f7;color:#191c23">중립</em><p>확정되면 원전 기대가 다시 붙습니다.</p><div class="rvpr"><em class="rvai">AI 예상</em>다음 1달 안에 확정 발표가 나올 가능성 35%</div></div><div class="rvfx"><b>기관 투자자 매도</b><em class="rvtg">유지</em><em class="rvtg" style="background:#e8effc;color:#1c58c4">악재</em><p>기관이 1달 동안 1,368억원어치 팔았습니다.</p><div class="rvpr"><em class="rvai">AI 예상</em>다음 1달 기관의 매도 금액이 이번 달보다 줄어들 가능성 55%</div></div><div class="rvbig" style="--k:#191c23;--kb:#f2f3f7"><span>다음 1달 현대건설 예상</span><b>◆ 박스권 · 95,000원</b><p>범위 80,000 ~ 105,000원 · 확률 50%</p><p style="color:#4a5060">3분기 실적과 금리 결정을 확인하는 달입니다. 시장이 진정되면 9만원대 중반으로 회복할 수 있습니다.</p></div></div></div><div class="rvsec" style="--c:#2b7a3b"><h4>✅ 빠짐없이 봤나 · 8개 분야</h4><div class="rvin"><div class="rvscan"><div style="--k:#1c58c4"><b>✓ 코스피·시장 흐름</b><em style="color:#c23b3b">영향 큼</em><p>코스피가 1주 동안 18% 떨어졌습니다. 현대건설 하락의 가장 큰 원인으로 봤습니다.</p></div><div style="--k:#1c58c4"><b>✓ 외국인·기관 수급</b><em style="color:#c23b3b">영향 큼</em><p>외국인은 시장 전체에서는 많이 팔았습니다. 하지만 현대건설은 오히려 샀습니다. 둘을 나눠서 봤습니다.</p></div><div style="--k:#191c23"><b>✓ 금리·환율</b><em style="color:#a84a00">영향 보통</em><p>미국 금리가 높아 부담입니다. 한국 금리가 내려가면 건설주에 좋습니다.</p></div><div style="--k:#1c58c4"><b>✓ 미국·해외 증시</b><em style="color:#a84a00">영향 보통</em><p>미국 물가가 예상보다 올라 미국 주식이 흔들렸고, 한국 주식 하락으로 이어졌습니다.</p></div><div style="--k:#1c58c4"><b>✓ 업종·테마</b><em style="color:#c23b3b">영향 큼</em><p>건설주가 다 같이 떨어졌습니다. 원전 기대로 올랐던 부분이 먼저 빠졌습니다.</p></div><div style="--k:#c92a2a"><b>✓ 실적·공시·수주</b><em style="color:#a84a00">영향 보통</em><p>10월 하순 3분기 실적 발표가 반등 계기가 될 수 있습니다. 새 공시는 없었습니다.</p></div><div style="--k:#191c23"><b>✓ 뉴스·정책·정치</b><em style="color:#5f6778">영향 작음</em><p>증권사 목표가 하향 기사가 있었습니다. 큰 정책 변화는 없었습니다.</p></div><div style="--k:#1c58c4"><b>✓ 차트·거래량</b><em style="color:#a84a00">영향 보통</em><p>주가가 10만원 아래로 내려갔습니다. 거래량이 크게 터지는 날을 바닥 신호로 보고 있습니다.</p></div></div></div></div><div class="rvsec" style="--c:#3b5bdb"><h4>📊 AI 적중률 추이 · 이번 2/7</h4><div class="rvin"><div style="display:flex;gap:6px;align-items:flex-end;justify-content:center"><div style="display:flex;flex-direction:column;align-items:center;gap:4px;flex:1;max-width:120px"><b style="font-size:22px">29%</b><div style="width:60%;height:100px;background:#eceef3;border-radius:8px;display:flex;align-items:flex-end;overflow:hidden;position:relative"><i style="position:absolute;left:0;right:0;bottom:50%;border-top:2px dashed #b0b6c3"></i><i style="display:block;width:100%;height:29%;background:#3b5bdb"></i></div><span style="font-size:19px;color:#5f6778;font-weight:700">9월</span></div></div><p style="font-size:19px;color:#5f6778;font-weight:600">가격·의견·상황 예상 채점 (맞음 1, 절반 0.5) · 점선 = 찍기 50%</p></div></div><p style="font-size:19px;color:#5f6778;font-weight:600">다음 1달 정기 알림에 같은 내용 고정 · AI 의견 · 투자 권유 아님</p></div><div class="fcs"><div class="fc" onclick="var d=this.closest('details');d.open=false;d.scrollIntoView({block:'start'})">접기 ▴</div><div class="fc" onclick="document.querySelectorAll('details').forEach(function(x){x.open=false});var f=document.querySelector('details.fold');if(f)f.scrollIntoView({block:'start'})">모두 접기 ▴▴</div></div></details><a class="hist" href="000720.html?v=1792364906">📅 지난 기록 보기</a><div class="ft">AI 분석 의견 · 투자 권유 아님</div></body></html>
